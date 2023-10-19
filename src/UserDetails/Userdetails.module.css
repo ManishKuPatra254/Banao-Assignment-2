@@ -68,6 +68,16 @@
     font-family: 'Bebas Neue', sans-serif;
 }
 
+.image_loader  {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: 70%;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+}
+
 .results_d {
     width: 50%;
     margin: auto;
