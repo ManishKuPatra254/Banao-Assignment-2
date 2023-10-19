@@ -54,12 +54,15 @@ export function Userdetails() {
                                     <img src={selectedUserId.avatar} alt="Not found" />
                                     <p id={styles.pr1}>@{selectedUserId.profile.username}</p>
                                     <p id={styles.pr2}>{selectedUserId.Bio}</p>
-                                    <h4>Full Name</h4>
-                                    <p id={styles.pr3}>{selectedUserId.profile.firstName} {selectedUserId.profile.lastName}</p>
-                                    <h4>Job Title</h4>
-                                    <p id={styles.pr3}>{selectedUserId.jobTitle}</p>
-                                    <h4>Email</h4>
-                                    <p id={styles.pr3}>{selectedUserId.profile.email}</p>
+
+                                    <div className={styles.user_info}>
+                                        <h4>Full Name</h4>
+                                        <p id={styles.pr3}>{selectedUserId.profile.firstName} {selectedUserId.profile.lastName}</p>
+                                        <h4>Job Title</h4>
+                                        <p id={styles.pr3}>{selectedUserId.jobTitle}</p>
+                                        <h4>Email</h4>
+                                        <p id={styles.pr3}>{selectedUserId.profile.email}</p>
+                                    </div>
                                 </div>
                             </Fragment>
                         ) : (
