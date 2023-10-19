@@ -24,8 +24,8 @@
 
 .names button {
     width: 60%;
-    border-radius: 5px;
-    background-color: rgb(255, 152, 114);
+    border-radius: 3px;
+    background-color: #53a2b4;
     color: black;
     font-size: 16px;
     cursor: pointer;
@@ -39,7 +39,7 @@
 
 .names button:hover {
     transition: .3s ease-in-out;
-    background-color: darkblue;
+    background-color: #dd7973;
     color: white;
 }
 
@@ -68,7 +68,7 @@
     font-family: 'Bebas Neue', sans-serif;
 }
 
-.image_loader  {
+.image_loader {
     display: flex;
     width: 100%;
     margin: auto;
@@ -84,6 +84,7 @@
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     border-radius: 3px;
     padding: 15px;
+    cursor: pointer;
 }
 
 .results_d h5 {
@@ -138,4 +139,47 @@
     padding: 11px 0px;
     text-align: justify;
     font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .main_user_details {
+        flex-direction: column;
+    }
+
+    .sub_user_details1,
+    .sub_user_details2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .sub_user_details1 h1,
+    .sub_user_details2 h1 {
+        font-size: 40px;
+    }
+
+    .names_id_btn {
+        width: 100%;
+        display: flex;
+    }
+
+    .names button {
+        width: 80%;
+        height: 100%;
+    }
+
+    .user_info>h4 {
+        font-size: 14px;
+    }
+
+    .results_d {
+        width: 100%;
+        overflow: auto;
+    }
+
+    .results_d img {
+        border-radius: 100px;
+        margin-top: 5px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+
 }

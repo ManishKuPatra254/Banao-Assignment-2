@@ -39,10 +39,10 @@ export function Userdetails() {
                 <div className={styles.sub_user_details1}>
                     <h1>USER LIST</h1>
                     {
-                        displayName.map((items, index) => (
+                        displayName.map((items) => (
                             <Fragment>
                                 <div className={styles.names_id_btn}>
-                                    <div className={styles.names} key={index}>
+                                    <div className={styles.names} key={items.id}>
                                         <Button sx={{ textTransform: 'unset' }} variant="contained" onClick={() => handleClickNameDisplay(items.id)}>{items.profile.firstName} {items.profile.lastName}</Button>
                                     </div>
                                 </div>
@@ -53,35 +53,36 @@ export function Userdetails() {
 
                 <div className={styles.sub_user_details2}>
                     <h1>USER DETAILS</h1>
-                    {progessLoad ? (
-                        <Fragment>
-                            <div className={styles.image_loader}>
-                                <p><CircularProgress size={100} sx={{ color: 'red' }} /></p>
-                            </div>
-                        </Fragment>
-                    ) : (
-                        clickedUser ? (
+                    {
+                        progessLoad ? (
                             <Fragment>
-                                <div className={styles.results_d}>
-                                    <h5>USER DETAILS</h5>
-                                    <img src={clickedUser.avatar} alt="Not found" />
-                                    <p id={styles.pr1}>@{clickedUser.profile.username}</p>
-                                    <p id={styles.pr2}>{clickedUser.Bio}</p>
-
-                                    <div className={styles.user_info}>
-                                        <h4>Full Name</h4>
-                                        <p id={styles.pr3}>{clickedUser.profile.firstName} {clickedUser.profile.lastName}</p>
-                                        <h4>Job Title</h4>
-                                        <p id={styles.pr3}>{clickedUser.jobTitle}</p>
-                                        <h4>Email</h4>
-                                        <p id={styles.pr3}>{clickedUser.profile.email}</p>
-                                    </div>
+                                <div className={styles.image_loader}>
+                                    <p><CircularProgress size={90} sx={{ color: '#dd7973' }} /></p>
                                 </div>
                             </Fragment>
                         ) : (
-                            <p>Select a user to see details.</p>
-                        )
-                    )}
+                            clickedUser ? (
+                                <Fragment>
+                                    <div className={styles.results_d}>
+                                        <h5>USER DETAILS</h5>
+                                        <img src={clickedUser.avatar} alt="Not found" />
+                                        <p id={styles.pr1}>@{clickedUser.profile.username}</p>
+                                        <p id={styles.pr2}>{clickedUser.Bio}</p>
+
+                                        <div className={styles.user_info}>
+                                            <h4>Full Name</h4>
+                                            <p id={styles.pr3}>{clickedUser.profile.firstName} {clickedUser.profile.lastName}</p>
+                                            <h4>Job Title</h4>
+                                            <p id={styles.pr3}>{clickedUser.jobTitle}</p>
+                                            <h4>Email</h4>
+                                            <p id={styles.pr3}>{clickedUser.profile.email}</p>
+                                        </div>
+                                    </div>
+                                </Fragment>
+                            ) : (
+                                <p>Select a user to see details.</p>
+                            )
+                        )}
                 </div>
             </div>
         </Fragment>
